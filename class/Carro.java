@@ -9,8 +9,16 @@ public class Carro {
         this.ano = ano;
     }
 
+    public String getMarca() {
+        return this.marca;
+    }
+
     public String getModelo() {
         return this.modelo;
+    }
+
+    public int getAno() {
+        return this.ano;
     }
     
     public String acelerar() {
