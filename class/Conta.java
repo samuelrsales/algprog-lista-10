@@ -1,9 +1,9 @@
 public class Conta {
     private String titular;
-    private String tipo;
+    private TipoConta tipo;
     private double saldo;
 
-    public Conta( String titular, String tipo, double saldo) {
+    public Conta( String titular, TipoConta tipo, double saldo) {
         this.titular = titular;
         this.tipo = tipo;
         this.saldo = saldo;
@@ -13,7 +13,7 @@ public class Conta {
         return this.titular;
     }
 
-    public String getTipo() {
+    public TipoConta getTipo() {
         return this.tipo;
     }
 
