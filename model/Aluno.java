@@ -1,3 +1,5 @@
+package model;
+
 import java.util.ArrayList;
 
 public class Aluno {
@@ -10,6 +12,7 @@ public class Aluno {
         this.nome = nome;
         this.email = email;
         this.matricula = matricula;
+        this.notas = new ArrayList<>();
     }
 
     public String getNome() {
@@ -24,26 +27,21 @@ public class Aluno {
         return this.matricula;
     }
 
-    public void getNotas() {
-        for (double nota: this.notas) {
-            System.out.println(nota);
-        }
+    public ArrayList<Double> getNotas() {
+        return this.notas;
+    }
+
+    public void lancarNota(double nota) {
+        this.notas.add(nota);
     }
 
     public void adicionarNota(double nota) {
-        this.notas.add(nota);
+        this.lancarNota(nota);
     }
 
     public boolean verificarAprovado() {
         double media = this.notas.stream().mapToDouble(Double::doubleValue).average().orElse(0);
 
-        if (media >= 7) {
-            return true;
-        } else {
-            return false;
-        }
-
+        return media >= 7;
     }
-
-
 }

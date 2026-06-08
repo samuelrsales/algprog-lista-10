@@ -1,3 +1,5 @@
+package model;
+
 public class Guitarra {
     private String modelo;
     private String marca;

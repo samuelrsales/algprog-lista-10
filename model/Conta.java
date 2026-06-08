@@ -1,3 +1,5 @@
+package model;
+
 public class Conta {
     private String titular;
     private TipoConta tipo;

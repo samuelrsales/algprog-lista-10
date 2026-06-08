@@ -1,3 +1,5 @@
+package model;
+
 public class Celular {
     private String sistemaOperacional;
     private String modelo;
